@@ -1,0 +1,10 @@
+h3{
+    color:darkblue;
+    font-weight: bold;
+}
+
+.container{
+    padding-left: 90px; 
+     width: 30%; 
+     border-radius: 5px;
+}
