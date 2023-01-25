@@ -5,8 +5,53 @@
         <title>Simulador - Inventario</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="shortcut icon" href = "img/icon.png" type="image/x-icon"> 
-        <link rel="shortcut icon" href = "css/estilos.css"> 
       </head>
+      <style>
+        *{
+          margin: 0px;
+          padding: 0px;
+        }
+        #general{
+          margin-top: 50px;
+          width: 1519px;
+          height: 800px;
+          background-color: rgb(244, 255, 254);
+        }
+
+        #info{
+          width: 400px;
+          height: 800px;
+        }
+
+        #arriba{
+          float: right;
+          width: 1150px;
+          height: 140px;
+          background-color: rgb(244, 255, 254);
+        }
+
+        #cuerpo{
+          float: right;
+          margin-top: 20px;
+          width: 1150px;
+          height: 640px;
+          background-color: rgb(244, 255, 254);
+        }
+        
+        #encabezado{
+          background-color: black;
+          color: white;
+          border: 10px;
+          margin-bottom: 5px;
+        }
+
+        #imagenes{
+          width: 150px;
+          height: 150px;
+        }
+
+       
+      </style>
     
       <body>
         <!--Primer Nav-->
@@ -90,12 +135,71 @@
           </div>
         </nav>
 
-        <!--Contenido pricipal-->
-        <main role="main">
-          <div class="container">
+        <!--Contenido-->
+       <div id="general">
+        <div id="arriba">
+          <a class="btn btn-warning" style="margin-top: 20px; margin-left: 810px;" href="home.html" role="button">Volver</a>
+          <img src="img/inventario2.PNG" alt="Img" style="width: 200px; height: 40px;margin-top: 20px;">
+          <br>
+          <img src="img/inventario3.PNG" alt="Img" style="width:300px; height:50px; margin-left: 785px; margin-top: 10px;">
+        </div>
+        <div id="cuerpo">
+          <table class="table table-hover table-bordered">
+            <thead id="encabezado">
+              <tr>
+                <th scope="col">Imagen</th>
+                <th scope="col">Info de Lote</th>
+                <th scope="col">Info de Vehículo</th>
+                <th scope="col">Condición</th>
+                <th scope="col">Info de Venta</th>
+                <th scope="col">Subasta</th>
+              </tr>
+            </thead>
+            <tbody id="cuepoT">
+              <tr class="table-light">
+                <td><img id="imagenes" src="img/L1/c1.jpg" alt="Lote1" ></td>
+                <td style="font-size: 18px;"><br> <b><a href="26883360.html">2012 TOYOTA PRIUS V</a></b>
+                    <br><br> Lot# <a href="26883360.html">26883360</a>
+                </td>
+                <td>Kilometraje 0 <br>
+                  (No Actual) <br><br>
+                  Valor Minorista <br> Estimado <br>
+                  $12,667.00 USD
+                </td>
+                <td><b> Salvage Title (SC-IL) <br>
+                    Daños en la parte <br> trasera <br><br>
+                    Llaves no disponibles</b>
+                </td>
+                <td>hola</td>
+                <td><br><br><b>Upcoming Lot</b></td>
+              </tr>
+              <tr class="table-light">
+                <td>como</td>
+                <td>como</td>
+                <td>como</td>
+                <td>como</td>
+                <td>como</td>
+                <td>como</td>
+              </tr>
+              <tr class="table-light">
+                <td>estas</td>
+                <td>estas</td>
+                <td>estas</td>
+                <td>estas</td>
+                <td>estas</td>
+                <td>estas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-          </div>
-        </main>
+        <div id="info">
+          <img src="img/inventario1.PNG" alt="Imagen Inventario" style="width:350px; height:800px;"> 
+        </div>
+       </div>
+
+       <br>        
+        
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>  
       </body>
