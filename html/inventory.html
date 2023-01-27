@@ -46,8 +46,9 @@
         }
 
         #imagenes{
-          width: 150px;
-          height: 150px;
+          width: 140px;
+          height: 140px;
+          text-align: center;
         }
 
        
@@ -82,9 +83,9 @@
                     Inventario
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Buscador de vehículos</a></li>
+                    <li><a class="dropdown-item" href="buscador.html">Buscador de vehículos</a></li>
                     <li><a class="dropdown-item" href="#">Lista de Ventas</a></li>
-                    <li><a class="dropdown-item" href="#">Mirar Lista</a></li>
+                    <li><a class="dropdown-item" href="favorite.html">Lista Favoritos</a></li>
                     <li><a class="dropdown-item" href="#">Búsquedas guardadas</a></li>
                     <li><a class="dropdown-item" href="#">Alertas de Vehículo</a></li>
                     <li><a class="dropdown-item" href="#">Buscar por Marca y Modelo</a></li>
@@ -147,39 +148,90 @@
           <table class="table table-hover table-bordered">
             <thead id="encabezado">
               <tr>
-                <th scope="col">Imagen</th>
-                <th scope="col">Info de Lote</th>
-                <th scope="col">Info de Vehículo</th>
-                <th scope="col">Condición</th>
-                <th scope="col">Info de Venta</th>
-                <th scope="col">Subasta</th>
+                <th scope="col" style="text-align: center;">Imagen</th>
+                <th scope="col" style="text-align: center;">Info de Lote</th>
+                <th scope="col" style="text-align: center;">Info de Vehículo</th>
+                <th scope="col" style="text-align: center;">Condición</th>
+                <th scope="col" style="text-align: center;">Info de Venta</th>
+                <th scope="col" style="text-align: center;">Subasta</th>
               </tr>
             </thead>
             <tbody id="cuepoT">
               <tr class="table-light">
-                <td><img id="imagenes" src="img/L1/c1.jpg" alt="Lote1" ></td>
-                <td style="font-size: 18px;"><br> <b><a href="26883360.html">2012 TOYOTA PRIUS V</a></b>
+                <td style="width: 145px;"><img id="imagenes" src="img/L1/c1.jpg" alt="Lote1" ></td>
+                <td style="font-size: 18px;"><br> <b><a href="26883360.html">2021 HONDA CR-V EXL </a></b>
                     <br><br> Lot# <a href="26883360.html">26883360</a>
                 </td>
-                <td>Kilometraje 0 <br>
-                  (No Actual) <br><br>
+                <td>Odómetro <br>
+                  8282 <br><br>
                   Valor Minorista <br> Estimado <br>
-                  $12,667.00 USD
+                  $36,737.00 USD
                 </td>
-                <td><b> Salvage Title (SC-IL) <br>
-                    Daños en la parte <br> trasera <br><br>
-                    Llaves no disponibles</b>
+                <td><b>Minor Dent/Scratches<br>
+                    Damage<br><br>
+                    Llaves disponibles</b>
                 </td>
-                <td>hola</td>
-                <td><br><br><b>Upcoming Lot</b></td>
+                <td align="center"> <br><br>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Ubicación
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="staticBackdropLabel">NJ</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Aquí se muestra la información de la ciudad y el puerto donde se encuentra el vehículo
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td><br><br><b>Próximo Lote</b></td>
               </tr>
+              <!--Segundo Lote-->
               <tr class="table-light">
-                <td>como</td>
-                <td>como</td>
-                <td>como</td>
-                <td>como</td>
-                <td>como</td>
-                <td>como</td>
+                <td style="width: 145px;"><img id="imagenes" src="img/L2/c1.jpg" alt="Lote1" ></td>
+                <td style="font-size: 18px;"><br> <b><a href="30795402 .html">2007 TOYOTA COROLLA CE</a></b>
+                    <br><br> Lot# <a href="30795402 .html">30795402 </a>
+                </td>
+                <td>Odómetro <br>
+                  299999 <br><br>
+                  Valor Minorista <br> Estimado <br>
+                  $3,528.00 USD
+                </td>
+                <td><b>
+                  Título de limpieza <br>
+                  Parte Delantera <br> Dañada<br><br>
+                  Llaves disponibles</b>
+                </td>
+                <td align="center"> <br><br>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Ubicación
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="staticBackdropLabel">FL</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Aquí se muestra la información de la ciudad y el puerto donde se encuentra el vehículo
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td><br><br><b>Próximo Lote</b></td>
               </tr>
               <tr class="table-light">
                 <td>estas</td>

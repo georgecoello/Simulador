@@ -2,13 +2,12 @@
 <html lang  ="en">
     <head>
         <meta charset="utf-8">
-        <title>Simulador - Como Funciona</title>
+        <title>Simulador - Lote 26883360</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="shortcut icon" href = "img/icon.png" type="image/x-icon"> 
-        <link rel="shortcut icon" href = "css/estilos.css"> 
-      </head>
-    
-    <body>
+    </head>
+
+      <body>
         <!--Primer Nav-->
         <nav class="navbar" style="background-color: #3d2a81">
             <div class="container-fluid">
@@ -17,7 +16,7 @@
               </a> 
               <form class="d-flex">
                 <input class="form-control me-2" type="search" width="1000" placeholder="Buscar en Inventario" aria-label="Search">
-                <button class="btn" style="background-color: yellow" type="submit">Buscar</button>
+                <a class="btn btn-warning" href="inventory.html" role="button"><b>Buscar</b></a>
               </form>   
             </div>
           </nav>
@@ -30,7 +29,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="function.html">Como Funciona</a>
+                  <a class="nav-link active" aria-current="page" href="home.html">Principal</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -39,7 +38,7 @@
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="buscador.html">Buscador de vehículos</a></li>
                     <li><a class="dropdown-item" href="#">Lista de Ventas</a></li>
-                    <li><a class="dropdown-item" href="favorite.html">Lista Favoritos</a></li>
+                    <li><a class="dropdown-item" href="favorite.html">Lista Favoritos </a></li>
                     <li><a class="dropdown-item" href="#">Búsquedas guardadas</a></li>
                     <li><a class="dropdown-item" href="#">Alertas de Vehículo</a></li>
                     <li><a class="dropdown-item" href="#">Buscar por Marca y Modelo</a></li>
@@ -90,31 +89,29 @@
           </div>
         </nav>
 
-        <!--Explicación de funcionalidad-->
-        <br><br>
-        <main>
-            <div class="jumbotron">
-                <div class="container">
-                    <div class="row">
-                        <div class="col" id="parrafo">
-                            <p style="text-align: justify;">
-                                <h3 style="color: darkblue; font-weight: bold;">Como Funciona</h3>
-                                Este simulador busca que todas las personas que lleguen a usarlo, sepan la manera de como funciona la subasta de los carros a tráves de la página oficial de Copart. 
-                                <br><br>
-                                Luego del acceso en la página del login se puede ver la manera de entrar y comprar nuevos vehículos.
-                                <br><br>
-                                Esperamos que esta página sea de su agrado y que pueda aprender a hacer las subastas de los carros que quiera comprar.
-                            </p>
+        <br>
+        <div style="width: 1519px; height: 300px; background-color: blue;">
+            <br><br>
+            <b  style="color: white; font-size: 100px; text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Favoritos</b>
+            <img src="img/busqueda.PNG" alt="" align="right" style="margin-right: 30px;">
+        </div>
+        <br>
+        <div style="margin: auto; width: 1000px; height: 300px;">
+            <br><br>
+            <h2 style="color: blue; text-align: center;"><b>Bienvenido a la sección de Favoritos</b></h2>
+            <br>
+            <p style="color: black;"><b>En esta sección encontrará todos los vehículos a los cuales le da dado click al botón de Añadir a Favoritos</b></p>
+            Podrá agregar más de 2000 lotes a la vez <br>
+            Siga disfrutando de la experiencia en este simulador
+        </div>
+        <br>
+        
+        <a class="btn btn-primary" href="home.html" role="button" style="margin-left: 100px;"><b>Volver a Home</b></a>
 
-                            <br><br><br>
-                            <a class="btn btn-dark" href="home.html" role="button"><b>Volver a Home</b></a>
-                        </div>
-                        <div class="col" id="img">
-                            <img src="img/funcion.png">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </body>  
+        <br><br>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>  
+
+    </body>
+    </div>
 </html>
