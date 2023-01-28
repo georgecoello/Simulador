@@ -84,7 +84,7 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="buscador.html">Buscador de vehículos</a></li>
-                    <li><a class="dropdown-item" href="#">Lista de Ventas</a></li>
+                    <li><a class="dropdown-item" href="ventas.html">Lista de Ventas</a></li>
                     <li><a class="dropdown-item" href="favorite.html">Lista Favoritos</a></li>
                     <li><a class="dropdown-item" href="#">Búsquedas guardadas</a></li>
                     <li><a class="dropdown-item" href="#">Alertas de Vehículo</a></li>
@@ -109,9 +109,9 @@
                     Vender un vehículo
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Para Individuos</a></li>
-                    <li><a class="dropdown-item" href="#">Para Negocios</a></li>
-                    <li><a class="dropdown-item" href="#">Para Distribuidores</a></li>
+                    <li><a class="dropdown-item" href="ind.html">Para Individuos</a></li>
+                    <li><a class="dropdown-item" href="neg.html">Para Negocios</a></li>
+                    <li><a class="dropdown-item" href="dist.html">Para Distribuidores</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -144,6 +144,9 @@
           <br>
           <img src="img/inventario3.PNG" alt="Img" style="width:300px; height:50px; margin-left: 785px; margin-top: 10px;">
         </div>
+
+
+        <!--Primer Lote-->
         <div id="cuerpo">
           <table class="table table-hover table-bordered">
             <thead id="encabezado">
@@ -159,8 +162,8 @@
             <tbody id="cuepoT">
               <tr class="table-light">
                 <td style="width: 145px;"><img id="imagenes" src="img/L1/c1.jpg" alt="Lote1" ></td>
-                <td style="font-size: 18px;"><br> <b><a href="26883360.html">2021 HONDA CR-V EXL </a></b>
-                    <br><br> Lot# <a href="26883360.html">26883360</a>
+                <td style="font-size: 18px;"><br> <b><a href="Lote1.html">2021 HONDA CR-V EXL </a></b>
+                    <br><br> Lot# <a href="Lote1.html">26883360</a>
                 </td>
                 <td>Odómetro <br>
                   8282 <br><br>
@@ -192,13 +195,18 @@
                     </div>
                   </div>
                 </td>
-                <td><br><br><b>Próximo Lote</b></td>
+                <td><b>Oferta Actual <br> $0.00 USD</b><br>
+                  <a class="btn btn-primary" href="Lote1.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
+                  <a class="btn btn-warning" href="Lote1.html" role="button"><b>Detalles</b></a>
+                </td>
               </tr>
+
+
               <!--Segundo Lote-->
               <tr class="table-light">
                 <td style="width: 145px;"><img id="imagenes" src="img/L2/c1.jpg" alt="Lote1" ></td>
-                <td style="font-size: 18px;"><br> <b><a href="30795402 .html">2007 TOYOTA COROLLA CE</a></b>
-                    <br><br> Lot# <a href="30795402 .html">30795402 </a>
+                <td style="font-size: 18px;"><br> <b><a href="Lote2.html">2007 TOYOTA COROLLA CE</a></b>
+                    <br><br> Lot# <a href="Lote2.html">30795402 </a>
                 </td>
                 <td>Odómetro <br>
                   299999 <br><br>
@@ -231,15 +239,97 @@
                     </div>
                   </div>
                 </td>
-                <td><br><br><b>Próximo Lote</b></td>
+                <td><b>Oferta Actual <br> $0.00 USD</b><br>
+                  <a class="btn btn-primary" href="Lote2.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
+                  <a class="btn btn-warning" href="Lote2.html" role="button"><b>Detalles</b></a>
+                </td>
               </tr>
+              
+
+              <!--Tercer Lote-->
               <tr class="table-light">
-                <td>estas</td>
-                <td>estas</td>
-                <td>estas</td>
-                <td>estas</td>
-                <td>estas</td>
-                <td>estas</td>
+                <td style="width: 145px;"><img id="imagenes" src="img/L3/c1.jpg" alt="Lote1" ></td>
+                <td style="font-size: 18px;"><br> <b><a href="Lote3.html">2009 FORD ESCAPE XLS</a></b>
+                    <br><br> Lot# <a href="Lote3.html">33537842</a>
+                </td>
+                <td>Odómetro <br>
+                  0 <br><br>
+                  Valor Minorista <br> Estimado <br>
+                  $6,038.00 USD
+                </td>
+                <td><b>
+                  Título de Salvamento<br>
+                  Parte Delantera <br> Dañada<br><br>
+                  Llaves disponibles</b>
+                </td>
+                <td align="center"> <br><br>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Ubicación
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="staticBackdropLabel">NE</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Aquí se muestra la información de la ciudad y el puerto donde se encuentra el vehículo
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td><b>Oferta Actual <br> $0.00 USD</b><br>
+                  <a class="btn btn-primary" href="Lote3.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
+                  <a class="btn btn-warning" href="Lote3.html" role="button"><b>Detalles</b></a>
+                </td>
+              </tr>
+
+              <!--Cuarto Lote-->
+              <tr class="table-light">
+                <td style="width: 145px;"><img id="imagenes" src="img/L4/c1.jpg" alt="Lote1" ></td>
+                <td style="font-size: 18px;"><br> <b><a href="Lote4.html">2004 FORD F150 </a></b>
+                    <br><br> Lot# <a href="Lote4.html">36248563</a>
+                </td>
+                <td>Odómetro <br>
+                  251381 <br><br>
+                  Valor Minorista <br> Estimado <br>
+                  $6,039.25 USD
+                </td>
+                <td><b>
+                  Título de Salvamento<br>
+                  Parte Delantera <br> Dañada<br><br>
+                  Llaves disponibles</b>
+                </td>
+                <td align="center"> <br><br>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Ubicación
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="staticBackdropLabel">GA</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Aquí se muestra la información de la ciudad y el puerto donde se encuentra el vehículo
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td><b>Oferta Actual <br> $0.00 USD</b><br>
+                  <a class="btn btn-primary" href="Lote4.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
+                  <a class="btn btn-warning" href="Lote4.html" role="button"><b>Detalles</b></a>
+                </td>
               </tr>
             </tbody>
           </table>
