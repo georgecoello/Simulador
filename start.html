@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang  ="en">
+<html>
     <head>
         <meta charset="utf-8">
         <title>Simulador - Inicio</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="shortcut icon" href = "img/icon.png" type="image/x-icon"> 
       </head>
-    
+      <style>
+        @media (max-width:800px) {
+          #imgP{
+            width: auto;
+          }          
+        }
+      </style>
+
       <body>
         <!--Primer Nav-->
         <nav class="navbar" style="background-color: #3d2a81">
@@ -15,7 +22,7 @@
                 <img src="img/logo.png" alt="Logo" width="200" height="60" >
               </a> 
               <form class="d-flex">
-                <input class="form-control me-2" type="search" width="1000" placeholder="Buscar en Inventario" aria-label="Search">
+                <input class="form-control me-2" type="search" placeholder="Buscar en Inventario" aria-label="Search">
                 <a class="btn btn-warning" href="html/inventory.html" role="button"><b>Buscar</b></a>
               </form>   
             </div>
@@ -24,7 +31,7 @@
         <!--Función Principal-->
         <main>
           <div id="imgP">
-            <img src="img/login simulador.jpg" height="600" width="1536">
+            <img src="img/login simulador.jpg" height="600" width="100%">
           </div>
           <br><br>
           <div class="d-grid gap-2 col-6 mx-auto">

@@ -13,29 +13,31 @@
         }
         #general{
           margin-top: 50px;
-          width: 1519px;
-          height: 800px;
+          width: 100%;
+          height: 900px;
           background-color: rgb(244, 255, 254);
         }
 
         #info{
           width: 400px;
-          height: 800px;
+          height: 900px;
         }
 
         #arriba{
           float: right;
-          width: 1150px;
+          width: 75%;
           height: 140px;
           background-color: rgb(244, 255, 254);
+          
         }
 
         #cuerpo{
           float: right;
           margin-top: 20px;
-          width: 1150px;
-          height: 640px;
+          width: 75%;
+          height: 760px;
           background-color: rgb(244, 255, 254);
+          
         }
         
         #encabezado{
@@ -51,7 +53,28 @@
           text-align: center;
         }
 
-       
+        @media (max-width:1400px) {
+          #info{
+            display: none;
+          }
+
+          #cuerpo{
+            float: left;
+          }
+          #arriba{
+            float: left;
+            margin-left: 0%;
+          }
+          #infoV{
+            display: none;
+          }
+          #condicion{
+            display: none;
+          }
+         #cuerpo{
+          width: 100%;
+         }
+        }       
       </style>
     
       <body>
@@ -102,7 +125,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Ubicación</a>
+                  <a class="nav-link active" aria-current="page" href="ubicacion.html">Ubicación</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -138,11 +161,11 @@
 
         <!--Contenido-->
        <div id="general">
-        <div id="arriba">
-          <a class="btn btn-warning" style="margin-top: 20px; margin-left: 810px;" href="home.html" role="button">Volver</a>
+        <div id="arriba" align="right">
+          <a class="btn btn-warning" style="margin-top: 20px;" href="home.html" role="button">Volver</a>
           <img src="img/inventario2.PNG" alt="Img" style="width: 200px; height: 40px;margin-top: 20px;">
           <br>
-          <img src="img/inventario3.PNG" alt="Img" style="width:300px; height:50px; margin-left: 785px; margin-top: 10px;">
+          <img src="img/inventario3.PNG" alt="Img" style="width:300px; height:50px; margin-top: 10px; ">
         </div>
 
 
@@ -151,30 +174,30 @@
           <table class="table table-hover table-bordered">
             <thead id="encabezado">
               <tr>
-                <th scope="col" style="text-align: center;">Imagen</th>
-                <th scope="col" style="text-align: center;">Info de Lote</th>
-                <th scope="col" style="text-align: center;">Info de Vehículo</th>
-                <th scope="col" style="text-align: center;">Condición</th>
-                <th scope="col" style="text-align: center;">Info de Venta</th>
-                <th scope="col" style="text-align: center;">Subasta</th>
+                <th id="imagen" scope="col" style="text-align: center;">Imagen</th>
+                <th id="infoL" scope="col" style="text-align: center;">Info de Lote</th>
+                <th id="infoV" scope="col" style="text-align: center;">Info de Vehículo</th>
+                <th id="condicion" scope="col" style="text-align: center;">Condición</th>
+                <th id="venta" scope="col" style="text-align: center;">Info de Venta</th>
+                <th id="subasta" scope="col" style="text-align: center;">Subasta</th>
               </tr>
             </thead>
             <tbody id="cuepoT">
               <tr class="table-light">
-                <td style="width: 145px;"><img id="imagenes" src="img/L1/c1.jpg" alt="Lote1" ></td>
-                <td style="font-size: 18px;"><br> <b><a href="Lote1.html">2021 HONDA CR-V EXL </a></b>
+                <td id="imagen" style="width: 145px;"><img id="imagenes" src="img/L1/c1.jpg" alt="Lote1" ></td>
+                <td id="infoL" style="font-size: 18px;"><br> <b><a href="Lote1.html">2021 HONDA CR-V EXL </a></b>
                     <br><br> Lot# <a href="Lote1.html">26883360</a>
                 </td>
-                <td>Odómetro <br>
+                <td id="infoV">Odómetro <br>
                   8282 <br><br>
                   Valor Minorista <br> Estimado <br>
                   $36,737.00 USD
                 </td>
-                <td><b>Minor Dent/Scratches<br>
+                <td id="condicion"><b>Minor Dent/Scratches<br>
                     Damage<br><br>
                     Llaves disponibles</b>
                 </td>
-                <td align="center"> <br><br>
+                <td align="center" id="venta"> <br><br>
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Ubicación
@@ -195,7 +218,7 @@
                     </div>
                   </div>
                 </td>
-                <td><b>Oferta Actual <br> $0.00 USD</b><br>
+                <td id="subasta"><b>Oferta Actual <br> $0.00 USD</b><br>
                   <a class="btn btn-primary" href="Lote1.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
                   <a class="btn btn-warning" href="Lote1.html" role="button"><b>Detalles</b></a>
                 </td>
@@ -204,21 +227,21 @@
 
               <!--Segundo Lote-->
               <tr class="table-light">
-                <td style="width: 145px;"><img id="imagenes" src="img/L2/c1.jpg" alt="Lote1" ></td>
-                <td style="font-size: 18px;"><br> <b><a href="Lote2.html">2007 TOYOTA COROLLA CE</a></b>
+                <td id="imagen" style="width: 145px;"><img id="imagenes" src="img/L2/c1.jpg" alt="Lote1" ></td>
+                <td id="infoL" style="font-size: 18px;"><br> <b><a href="Lote2.html">2007 TOYOTA COROLLA CE</a></b>
                     <br><br> Lot# <a href="Lote2.html">30795402 </a>
                 </td>
-                <td>Odómetro <br>
+                <td id="infoV">Odómetro <br>
                   299999 <br><br>
                   Valor Minorista <br> Estimado <br>
                   $3,528.00 USD
                 </td>
-                <td><b>
+                <td id="condicion"><b>
                   Título de limpieza <br>
                   Parte Delantera <br> Dañada<br><br>
                   Llaves disponibles</b>
                 </td>
-                <td align="center"> <br><br>
+                <td align="center" id="venta"> <br><br>
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Ubicación
@@ -239,7 +262,7 @@
                     </div>
                   </div>
                 </td>
-                <td><b>Oferta Actual <br> $0.00 USD</b><br>
+                <td id="subasta"><b>Oferta Actual <br> $0.00 USD</b><br>
                   <a class="btn btn-primary" href="Lote2.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
                   <a class="btn btn-warning" href="Lote2.html" role="button"><b>Detalles</b></a>
                 </td>
@@ -248,21 +271,21 @@
 
               <!--Tercer Lote-->
               <tr class="table-light">
-                <td style="width: 145px;"><img id="imagenes" src="img/L3/c1.jpg" alt="Lote1" ></td>
-                <td style="font-size: 18px;"><br> <b><a href="Lote3.html">2009 FORD ESCAPE XLS</a></b>
+                <td id="imagen" style="width: 145px;"><img id="imagenes" src="img/L3/c1.jpg" alt="Lote1" ></td>
+                <td id="infoL" style="font-size: 18px;"><br> <b><a href="Lote3.html">2009 FORD ESCAPE XLS</a></b>
                     <br><br> Lot# <a href="Lote3.html">33537842</a>
                 </td>
-                <td>Odómetro <br>
+                <td id="infoV">Odómetro <br>
                   0 <br><br>
                   Valor Minorista <br> Estimado <br>
                   $6,038.00 USD
                 </td>
-                <td><b>
+                <td id="condicion"><b>
                   Título de Salvamento<br>
                   Parte Delantera <br> Dañada<br><br>
                   Llaves disponibles</b>
                 </td>
-                <td align="center"> <br><br>
+                <td align="center" id="venta"> <br><br>
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Ubicación
@@ -283,7 +306,7 @@
                     </div>
                   </div>
                 </td>
-                <td><b>Oferta Actual <br> $0.00 USD</b><br>
+                <td id="subasta"><b>Oferta Actual <br> $0.00 USD</b><br>
                   <a class="btn btn-primary" href="Lote3.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
                   <a class="btn btn-warning" href="Lote3.html" role="button"><b>Detalles</b></a>
                 </td>
@@ -291,21 +314,21 @@
 
               <!--Cuarto Lote-->
               <tr class="table-light">
-                <td style="width: 145px;"><img id="imagenes" src="img/L4/c1.jpg" alt="Lote1" ></td>
-                <td style="font-size: 18px;"><br> <b><a href="Lote4.html">2004 FORD F150 </a></b>
+                <td id="imagen" style="width: 145px;"><img id="imagenes" src="img/L4/c1.jpg" alt="Lote1" ></td>
+                <td id="infoL" style="font-size: 18px;"><br> <b><a href="Lote4.html">2004 FORD F150 </a></b>
                     <br><br> Lot# <a href="Lote4.html">36248563</a>
                 </td>
-                <td>Odómetro <br>
+                <td id="infoV">Odómetro <br>
                   251381 <br><br>
                   Valor Minorista <br> Estimado <br>
                   $6,039.25 USD
                 </td>
-                <td><b>
+                <td id="condicion"><b>
                   Título de Salvamento<br>
                   Parte Delantera <br> Dañada<br><br>
                   Llaves disponibles</b>
                 </td>
-                <td align="center"> <br><br>
+                <td align="center" id="venta"> <br><br>
                   <!-- Button trigger modal -->
                   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Ubicación
@@ -326,7 +349,7 @@
                     </div>
                   </div>
                 </td>
-                <td><b>Oferta Actual <br> $0.00 USD</b><br>
+                <td id="subasta"><b>Oferta Actual <br> $0.00 USD</b><br>
                   <a class="btn btn-primary" href="Lote4.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
                   <a class="btn btn-warning" href="Lote4.html" role="button"><b>Detalles</b></a>
                 </td>

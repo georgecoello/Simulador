@@ -14,8 +14,8 @@
 
         #general{
             margin: auto;
-            width: 1519px;
-            height: 1150px;
+            width: 100%;
+            height: 100%;
             background-color: rgb(227, 253, 251);
         }
 
@@ -36,12 +36,36 @@
             
         }
 
-
         #agg{
             width: 370px;
             height: 1150px;
             display: inline-block;
             margin-left: 30px;
+        }
+
+        @media (max-width:800px) {
+          #general{
+            width: 100%;
+            height: 100%;
+          }
+          #carouselExample{
+            width: 90%;
+            padding-left: 35px;
+          }
+          
+          #fotos{
+            padding-top: 50px;
+            width: 90%;
+            height: 100%;
+          }
+          #info{
+            width: 90%;
+            height: 100%;
+          }
+          #agg{
+            width: 90%;
+            height: 100%;
+          }
         }
       </style>
 
@@ -93,7 +117,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Ubicación</a>
+                  <a class="nav-link active" aria-current="page" href="ubicacion.html">Ubicación</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -128,9 +152,9 @@
         </nav>
 
         <!--Información del carro-->
-        <div style="height: 80px;">
-            <b style="font-size: 40px;">2004 FORD F150</b>
-            <img src="img/L1/img.PNG" alt="Imagen compartir" align="right">
+        <div style="height: 120px;">
+            <b style="font-size: 40px;">2004 FORD F150</b><br>
+            <img src="img/L1/img.PNG" alt="Imagen compartir" >
         </div>
         <div id="general">
           <!--Carrusel de fotos-->
@@ -168,6 +192,7 @@
 
                   <br><br><br>
                   <img src="img/L1/Captura5.PNG" alt="Imagen Apartado Fotos" style="width: 600px;">
+                  <br><br>
             </div>
 
               <!--Información General del carro-->
@@ -176,7 +201,7 @@
                     <thead style="border-color: rgb(44, 160, 232);">
                         <tr style="text-align: center;">
                             <th scope="col" style="color: white; background-color: rgb(44, 160, 232);">Lot # 36248563</th>
-                            <th scope="col" style="color: rgb(44, 160, 232);"> Más Información</th>
+                            <th scope="col" style="color: rgb(44, 160, 232); background-color: white;"> Más Información</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -252,6 +277,7 @@
                 </table>
                 <br>
                 <img src="img/L1/Captura4.PNG" alt="Info" style="width: 450px; height: 300px;">
+                <br><br>
             </div>
 
               <!--Información de la Venta-->

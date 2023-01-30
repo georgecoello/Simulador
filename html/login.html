@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang  ="en">
+<html>
     <head>
         <meta charset="utf-8">
         <title>Simulador - Login</title>
@@ -7,7 +7,24 @@
         <link rel="shortcut icon" href = "img/icon.png" type="image/x-icon"> 
         <link rel="shortcut icon" href = "css/estilos.css"> 
       </head>
-    
+      
+      <style>
+        #principal{
+          width: 100%;
+        }
+
+        #formulario{
+          margin-left: 50px;
+          width: 600px;
+        }
+
+        @media (max-width:700px) {
+          #carouselExample{
+            display: none;
+          }
+        }
+      </style>
+
       <body>
         <!--Primer Nav-->
         <nav class="navbar" style="background-color: #3d2a81">
@@ -56,7 +73,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Ubicación</a>
+                  <a class="nav-link active" aria-current="page" href="ubicacion.html">Ubicación</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -92,7 +109,7 @@
         
         <br>
         <!--Formulario de Ingreso-->
-        <main role="main">
+        <main role="main" id="principal">
           <div class="jumbotron">
             <div class="container">
               <div class="row">
@@ -100,13 +117,13 @@
                   <div id="carouselExample" class="carousel slide">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="img/Imagen de Login.PNG" class="d-block w-100" alt="Imagen1" style="width: 500; height: 300;">
+                        <img src="img/Imagen de Login.PNG" class="d-block w-100" alt="Imagen1" style="width: 500px; height: 300xp;">
                       </div>
                       <div class="carousel-item">
-                        <img src="img/Complento de Ingreso 2.PNG" class="d-block w-100" alt="Imagen2" style="width: 500; height: 300;">
+                        <img src="img/Complento de Ingreso 2.PNG " class="d-block w-100" alt="Imagen2" style="width: 500px; height: 300xp;">
                       </div>
                       <div class="carousel-item">
-                        <img src="img/Complento de Ingreso 3.PNG" class="d-block w-100" alt="Imagen3" style="width: 500; height: 300;">
+                        <img src="img/Complento de Ingreso 3.PNG" class="d-block w-100" alt="Imagen3" style="width: 500px; height: 300xp;">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -120,7 +137,7 @@
                   </div>
                 </div>
                 <div class="col">
-                  <form>
+                  <form id="formulario">
                     <div class="col" style="width: 50%; border-radius: 5px;">
                       <h3 style="color: darkblue; font-weight: bold;">Ingrese Usuario</h3>
                         <div class=" row" style="background-color: rgb(30, 131, 135); color: white; font-weight: bold; border-radius: 5px;">
