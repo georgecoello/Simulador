@@ -2,27 +2,36 @@
 <html lang  ="en">
     <head>
         <meta charset="utf-8">
-        <title>Simulador - Venta Negocios</title>
+        <title>Simulador - Lotes Ganados</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="shortcut icon" href = "img/icon.png" type="image/x-icon"> 
-    </head>
-    <style>
-      #parrafo{
-        padding-left: 50px; 
-      }
-      #titulo{
-        padding-left:50px ;
-      }
-      @media (max-width:750px) {
+      </head>
+      <style>
         #titulo{
-          width: 100%;
-          padding-left: 20px;
+            margin-top: 20px;
+            color: blue;
         }
-        #parrafo{
-          width: auto;
+
+        @media (max-width:700px) {
+          #contenido{
+            width: 50%;
+          }
+          #anio{
+            display: none;
+          }
+          #model{
+            display: none;
+          }
+          #ubic{
+            display: none;
+          }
+          #doc{
+            display: none;
+          }
+          
         }
-      }
-    </style>
+      </style>
+
       <body>
         <!--Primer Nav-->
         <nav class="navbar" style="background-color: #3d2a81">
@@ -115,19 +124,35 @@
           </div>
         </nav>
 
-        <h1 id="titulo" style="color: blue; margin-top: 10px; margin-bottom: 20px;"><b>Venta para poder hacer Negocios</b></h1><br>
+        <h3 id="titulo"><b>Mis Ofertas</b></h3>
 
-        <div id="parrafo" style="height: 300px; width: 100%; margin: auto;">
-            <h4><b>Algunos de los beneficios que ofrece</b></h4><br>
-            <p>
-                <li>Más de 750.000 miembros en más de 170 países</li>
-                <li>Más de 44 millones de ofertas hechas el año pasado</li>
-                <li>Más de un millón de búsquedas hechas a diario</li>
-                <li>$75 millardos en compromisos hechos anualmente</li>
-                <li>Más de 100.000 vehículos movidos al mes</li>
-                <li>Más de 7.000 acres y más de 250.000 vehículos en almacenamiento</li>
-            </p>
-        </div>
+        <h4 style="margin-top: 20px;">Lotes Ganados</h4>
+
+        <table id="contenido" class="table">
+            <thead>
+                <tr>
+                    <th id="img">Imágenes</th>
+                    <th id="lot">N° Lote</th>
+                    <th id="anio">Año</th>
+                    <th id="marca">Marca</th>
+                    <th id="model">Modelo</th>
+                    <th id="local">Locales</th>
+                    <th id="vin">VIN</th>
+                    <th id="fventa">Fecha Venta</th>
+                    <th id="ubic">Ubicación</th>
+                    <th id="doc">Tipo de Doc.</th>
+                    <th id="danio">Daño</th>
+                    <th id="vma">Venta Min. Aprox.</th>
+                    <th id="monto">Monto de Factura</th>
+                    <th id="deliv">Delivery</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="14" style="text-align: center;">No tiene ninguna oferta. Obtenga información sobre cómo ofertar or buscar vehículos para realizar una oferta.</td>
+                </tr>
+            </tbody>
+        </table>
 
         <a class="btn btn-primary" href="home.html" role="button" style="margin-left: 100px;"><b>Volver a Home</b></a>
 

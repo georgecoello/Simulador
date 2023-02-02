@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang  ="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Simulador - Subastas de hoy</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="shortcut icon" href = "img/icon.png" type="image/x-icon"> 
+      </head>
+      <style>
+        #titulo{
+            margin-top: 20px;
+            color: blue;
+        }
+        #parrafo{
+                margin-left: 10px;
+                margin-right: 10px;
+        }
+        #tablas{
+            border:5px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 75%;
+        }
+        #info{
+            float: right;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 23%;
+            height: 100px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        #tabla{
+            width: 100%; 
+            height: 500px; 
+            margin-top: 10px;
+        }
+        td,th{
+                border: black 1px solid;
+        }
+        @media (max-width:700px) {
+            #titulo{
+                margin-left: 10px;
+            }
+            #parrafo{
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            #tablas{
+                margin-left: 10px;
+                margin-right: 10px;
+                width: 95%;
+                height: 100%;
+            }
+            #info{
+                display: none;
+            }
+            #tabla{
+            width: 100%; 
+            height: 595px; 
+            margin-top: 10px;
+            border: black 1px solid;
+            }
+            td,th{
+                border: black 1px solid;
+            }
+        }
+      </style>
+
+      <body>
+        <!--Primer Nav-->
+        <nav class="navbar" style="background-color: #3d2a81">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="Logo" width="200" height="60" >
+              </a> 
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" width="1000" placeholder="Buscar en Inventario" aria-label="Search">
+                <a class="btn btn-warning" href="inventory.html" role="button"><b>Buscar</b></a>
+              </form>   
+            </div>
+          </nav>
+         <!--Segunda Nav-->
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="home.html">Principal</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Inventario
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="buscador.html">Buscador de vehículos</a></li>
+                    <li><a class="dropdown-item" href="ventas.html">Lista de Ventas</a></li>
+                    <li><a class="dropdown-item" href="favorite.html">Lista Favoritos </a></li>
+                    <li><a class="dropdown-item" href="#">Búsquedas guardadas</a></li>
+                    <li><a class="dropdown-item" href="#">Alertas de Vehículo</a></li>
+                    <li><a class="dropdown-item" href="#">Buscar por Marca y Modelo</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Subastas
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Subastas de Hoy</a></li>
+                    <li><a class="dropdown-item" href="#">Calendario de Subastas</a></li>
+                    <li><a class="dropdown-item" href="#">Unir a Subastas</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Estado de la Oferta
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Mis Ofertas</a></li>
+                    <li><a class="dropdown-item" href="win.html">Lotes Ganados</a></li>
+                    <li><a class="dropdown-item" href="#">Lotes Perdidos</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="ubicacion.html">Ubicación</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Vender un vehículo
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="ind.html">Para Individuos</a></li>
+                    <li><a class="dropdown-item" href="neg.html">Para Negocios</a></li>
+                    <li><a class="dropdown-item" href="dist.html">Para Distribuidores</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Servicio y Soporte 
+                  </a>
+                  <ul class="dropdown-menu" >
+                    <li><a class="dropdown-item" href="#">Brokers</a></li>
+                    <li><a class="dropdown-item" href="#">Inspectores</a></li>
+                    <li><a class="dropdown-item" href="#">Reporte de vehículo</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Como Comprar</a></li>
+                    <li><a class="dropdown-item" href="#">Preguntas comunes</a></li>
+                    <li><a class="dropdown-item" href="#">Ayuda de licencia</a></li>
+                    <li><a class="dropdown-item" href="#">Videos</a></li>
+                    <li><a class="dropdown-item" href="#">Contactanos</a></li>
+                    <li><a class="dropdown-item" href="#" style="color: gold;"><b>Centro de Ayuda</b></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <h3 id="titulo"><b>Subastas de hoy</b></h3>
+
+        <p id="parrafo">En esta sección puede ver las diferentes subastas que se han a desarrollar y la información de cada una de ellas </p>
+
+        <div id="info">
+            <h4><b>Subastas de hoy</b></h4>
+            <p style="text-align: justify;">Cualquier subasta de autos de Copart que se lleve a cabo hoy aparecerá aquí en Subastas de hoy. Esto incluye las subastas en línea de Copart que se llevan a cabo ahora en tiempo real, así como todas las subastas en línea de vehículos que se llevan a cabo más tarde durante el día.
+                <br><br>
+            También puede ver el listado de diversas maneras, como una vista de mapa, una vista de calendario o una vista de lista. ¡Simplemente elija la vista que prefiera y consulte las subastas de Copart del día de hoy!</p>
+        </div>
+
+        <div id="tablas">
+            <div style="width: 100%; height: 30px; padding-left: 10px; border: black 1px solid;">
+                <b>Subastas en vivo ahora mismo</b>
+            </div>
+            <div id="tabla">
+                <table class="table">
+                    <thead style="text-align: center; background-color: gainsboro;">
+                        <tr>
+                            <td><b>Hora</b></td>
+                            <td><b>Nombre Venta</b></td>
+                            <td><b>Región</b></td>
+                            <td><b>Sala</b></td>
+                            <td><b>Artículos</b></td>
+                            <td><b>Subasta</b></td>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align: center;">
+                        <tr>
+                            <td>09:00 CST</td>
+                            <td>FL</td>
+                            <td>Florida</td>
+                            <td>B</td>
+                            <td>5</td>
+                            <td align="left"><a class="btn btn-success" href="S1.html" role="button" style="margin-left: 100px;"><b>Sumarse</b></a></td>
+                        </tr>
+                        <tr>
+                            <td>09:00 CST</td>
+                            <td>NJ</td>
+                            <td>Nueva Jersey</td>
+                            <td>A</td>
+                            <td>5</td>
+                            <td align="left"><a class="btn btn-success" href="home.html" role="button" style="margin-left: 100px;"><b>Sumarse</b></a></td>
+                        </tr>
+                        <tr>
+                            <td>09:00 CST</td>
+                            <td>NE</td>
+                            <td>Nueva Inglaterra</td>
+                            <td>A</td>
+                            <td>5</td>
+                            <td align="left"><a class="btn btn-success" href="home.html" role="button" style="margin-left: 100px;"><b>Sumarse</b></a></td>
+                        </tr>
+                        <tr>
+                            <td>09:00 CST</td>
+                            <td>GA</td>
+                            <td>Georgia</td>
+                            <td>A</td>
+                            <td>5</td>
+                            <td align="left"><a class="btn btn-success" href="home.html" role="button" style="margin-left: 100px;"><b>Sumarse</b></a></td>
+                        </tr>
+                        <tr>
+                            <td>09:00 CST</td>
+                            <td>CA</td>
+                            <td>California</td>
+                            <td>A</td>
+                            <td>5</td>
+                            <td align="left"><a class="btn btn-success" href="home.html" role="button" style="margin-left: 100px;"><b>Sumarse</b></a></td>
+                        </tr>
+                        <tr>
+                            <td>09:00 CST</td>
+                            <td>IL</td>
+                            <td>Illinois</td>
+                            <td>A</td>
+                            <td>5</td>
+                            <td align="left"><a class="btn btn-success" href="home.html" role="button" style="margin-left: 100px;"><b>Sumarse</b></a></td>
+                        </tr>
+                        <tr>
+                            <td>09:00 CST</td>
+                            <td>GA</td>
+                            <td>Georgia</td>
+                            <td>A</td>
+                            <td>5</td>
+                            <td align="left"><a class="btn btn-success" href="home.html" role="button" style="margin-left: 100px;"><b>Sumarse</b></a></td>
+                        </tr>
+                        <tr>
+                            <td>09:00 CST</td>
+                            <td>TX</td>
+                            <td>Texas</td>
+                            <td>A</td>
+                            <td>5</td>
+                            <td align="left"><a class="btn btn-success" href="home.html" role="button" style="margin-left: 100px;"><b>Sumarse</b></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>  
+    </body>
+</html>

@@ -14,13 +14,13 @@
         #general{
           margin-top: 50px;
           width: 100%;
-          height: 900px;
+          height: 100%;
           background-color: rgb(244, 255, 254);
         }
 
         #info{
           width: 400px;
-          height: 900px;
+          height: 830px;
         }
 
         #arriba{
@@ -35,7 +35,7 @@
           float: right;
           margin-top: 20px;
           width: 75%;
-          height: 760px;
+          height: 1330px;
           background-color: rgb(244, 255, 254);
           
         }
@@ -124,6 +124,16 @@
                     <li><a class="dropdown-item" href="#">Unir a Subastas</a></li>
                   </ul>
                 </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Estado de la Oferta
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Mis Ofertas</a></li>
+                    <li><a class="dropdown-item" href="win.html">Lotes Ganados</a></li>
+                    <li><a class="dropdown-item" href="#">Lotes Perdidos</a></li>
+                  </ul>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="ubicacion.html">Ubicación</a>
                 </li>
@@ -199,16 +209,16 @@
                 </td>
                 <td align="center" id="venta"> <br><br>
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Ubicación
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">NJ</h1>
+                          <h5 class="modal-title" id="exampleModalLabel">NJ</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -243,16 +253,16 @@
                 </td>
                 <td align="center" id="venta"> <br><br>
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Ubicación
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">FL</h1>
+                          <h5 class="modal-title" id="exampleModalLabel">FL</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -287,16 +297,16 @@
                 </td>
                 <td align="center" id="venta"> <br><br>
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Ubicación
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">NE</h1>
+                          <h5 class="modal-title" id="exampleModalLabel">NE</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -330,16 +340,16 @@
                 </td>
                 <td align="center" id="venta"> <br><br>
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Ubicación
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">GA</h1>
+                          <h5 class="modal-title" id="exampleModalLabel">GA</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -354,6 +364,178 @@
                   <a class="btn btn-warning" href="Lote4.html" role="button"><b>Detalles</b></a>
                 </td>
               </tr>
+
+              <!--Quinto Lote-->
+              <tr class="table-light">
+                <td id="imagen" style="width: 145px;"><img id="imagenes" src="img/L5/c1.jpg" alt="Lote1" ></td>
+                <td id="infoL" style="font-size: 18px;"><br> <b><a href="Lote5.html">2011 TOYOTA COROLLA BASE</a></b>
+                    <br><br> Lot# <a href="Lote5.html">31267852</a>
+                </td>
+                <td id="infoV">Odómetro <br>
+                  82682<br><br>
+                  Valor Minorista <br> Estimado <br>
+                  $11,137.00 USD
+                </td>
+                <td id="condicion"><b>
+                  Título de Salvamento<br>
+                  Parte Delantera <br> Dañada<br><br>
+                  Llaves disponibles</b>
+                </td>
+                <td align="center" id="venta"> <br><br>
+                 <!-- Button trigger modal -->
+                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Ubicación
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">CA</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        Aquí se muestra la información de la ciudad y el puerto donde se encuentra el vehículo
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </td>
+                <td id="subasta"><b>Oferta Actual <br> $0.00 USD</b><br>
+                  <a class="btn btn-primary" href="Lote5.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
+                  <a class="btn btn-warning" href="Lote5.html" role="button"><b>Detalles</b></a>
+                </td>
+              </tr>
+
+              <!--Sexto Lote-->
+              <tr class="table-light">
+                <td id="imagen" style="width: 145px;"><img id="imagenes" src="img/L6/c1.jpg" alt="Lote1" ></td>
+                <td id="infoL" style="font-size: 18px;"><br> <b><a href="Lote6.html">2017 HYUNDAI ELANTRA SE</a></b>
+                    <br><br> Lot# <a href="Lote6.html">29716941</a>
+                </td>
+                <td id="infoV">Odómetro <br>
+                  15731 <br><br>
+                  Valor Minorista <br> Estimado <br>
+                  $14,918.00 USD 
+                </td>
+                <td id="condicion"><b>
+                  Parte Delantera <br> Dañada<br><br>
+                  Llaves disponibles</b>
+                </td>
+                <td align="center" id="venta"> <br><br>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ubicación
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">GA</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Aquí se muestra la información de la ciudad y el puerto donde se encuentra el vehículo
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td id="subasta"><b>Oferta Actual <br> $0.00 USD</b><br>
+                  <a class="btn btn-primary" href="Lote6.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
+                  <a class="btn btn-warning" href="Lote6.html" role="button"><b>Detalles</b></a>
+                </td>
+              </tr>
+              
+              <!--Séptimo Lote-->
+              <tr class="table-light">
+                <td id="imagen" style="width: 145px;"><img id="imagenes" src="img/L7/c1.jpg" alt="Lote1" ></td>
+                <td id="infoL" style="font-size: 18px;"><br> <b><a href="Lote7.html">2015 HONDA CR-V EXL</a></b>
+                    <br><br> Lot# <a href="Lote7.html">31094662</a>
+                </td>
+                <td id="infoV">Odómetro <br>
+                  88390 <br><br>
+                  Valor Minorista <br> Estimado <br>
+                  $17,597.00 USD
+                </td>
+                <td id="condicion"><b>
+                  Titulo de Salvamento <br>
+                  Parte Delantera <br> Dañada<br><br>
+                  Llaves disponibles</b>
+                </td>
+                <td align="center" id="venta"> <br><br>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ubicación
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">IL</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Aquí se muestra la información de la ciudad y el puerto donde se encuentra el vehículo
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td id="subasta"><b>Oferta Actual <br> $0.00 USD</b><br>
+                  <a class="btn btn-primary" href="Lote7.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
+                  <a class="btn btn-warning" href="Lote7.html" role="button"><b>Detalles</b></a>
+                </td>
+              </tr>
+
+               <!--Octavo Lote-->
+               <tr class="table-light">
+                <td id="imagen" style="width: 145px;"><img id="imagenes" src="img/L8/c1.jpg" alt="Lote1" ></td>
+                <td id="infoL" style="font-size: 18px;"><br> <b><a href="Lote8.html">1996 HONDA CIVIC EX</a></b>
+                    <br><br> Lot# <a href="Lote8.html">31363001</a>
+                </td>
+                <td id="infoV">Odómetro <br>
+                  171970  <br><br>
+                  Valor Minorista <br> Estimado <br>
+                  $500.00 USD
+                </td>
+                <td id="condicion"><b>
+                  Titulo de limpieza <br>
+                  Daño Despojado<br><br>
+                  Llaves disponibles</b>
+                </td>
+                <td align="center" id="venta"> <br><br>
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ubicación
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">TX</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Aquí se muestra la información de la ciudad y el puerto donde se encuentra el vehículo
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td id="subasta"><b>Oferta Actual <br> $0.00 USD</b><br>
+                  <a class="btn btn-primary" href="Lote8.html" role="button" style="margin-bottom: 10px;"><b>Ofertar Ahora</b></a><br>
+                  <a class="btn btn-warning" href="Lote8.html" role="button"><b>Detalles</b></a>
+                </td>
+              </tr>
+
             </tbody>
           </table>
         </div>

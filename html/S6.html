@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang  ="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Simulador - Subasta</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="shortcut icon" href = "img/icon.png" type="image/x-icon"> 
+      </head>
+      <style>
+        #up{
+            background-color: blue;
+            width: 98%;
+            height: 30px;
+            color: white;
+            margin-top: 20px;
+            margin-left: 25px;
+            padding-left: 10px;
+        }
+        #general{
+            width: 98%;
+            height: 542px;
+            margin-left: 25px;
+        }
+        #carrusel{
+            float: left;
+            height: 470px;
+            width: 40%;
+            display: inline-block;
+        }
+        #sub{
+            float: left;
+            display: inline-block;
+            width: 30%;
+            height: 470px;
+        }
+        #superior{
+            background-color: white;
+            width: 100%;
+            height: 50px;
+            padding-left: 20px;
+        }
+        #infoC{
+            width: 60%;
+            height: 450px;
+            padding-right: 5px;
+            background-color: yellow;
+        }
+        td,tr{
+          border: black 1px solid;
+        }
+        #compra{
+            float: right;
+            background-color: yellowgreen;
+            display: inline-block;
+            width: 40%;
+            height: 450px;
+        }
+        #proxima{
+            float: left;
+            display: inline-block;
+            width: 30%;
+            height: 540px;
+        }
+      </style>
+
+      <body>
+        <!--Primer Nav-->
+        <nav class="navbar" style="background-color: #3d2a81">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="Logo" width="200" height="60" >
+              </a> 
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" width="1000" placeholder="Buscar en Inventario" aria-label="Search">
+                <a class="btn btn-warning" href="inventory.html" role="button"><b>Buscar</b></a>
+              </form>   
+            </div>
+          </nav>
+         <!--Segunda Nav-->
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="home.html">Principal</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Inventario
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="buscador.html">Buscador de vehículos</a></li>
+                    <li><a class="dropdown-item" href="ventas.html">Lista de Ventas</a></li>
+                    <li><a class="dropdown-item" href="favorite.html">Lista Favoritos </a></li>
+                    <li><a class="dropdown-item" href="#">Búsquedas guardadas</a></li>
+                    <li><a class="dropdown-item" href="#">Alertas de Vehículo</a></li>
+                    <li><a class="dropdown-item" href="#">Buscar por Marca y Modelo</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Subastas
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Subastas de Hoy</a></li>
+                    <li><a class="dropdown-item" href="#">Calendario de Subastas</a></li>
+                    <li><a class="dropdown-item" href="#">Unir a Subastas</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Estado de la Oferta
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Mis Ofertas</a></li>
+                    <li><a class="dropdown-item" href="win.html">Lotes Ganados</a></li>
+                    <li><a class="dropdown-item" href="#">Lotes Perdidos</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="ubicacion.html">Ubicación</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Vender un vehículo
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="ind.html">Para Individuos</a></li>
+                    <li><a class="dropdown-item" href="neg.html">Para Negocios</a></li>
+                    <li><a class="dropdown-item" href="dist.html">Para Distribuidores</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Servicio y Soporte 
+                  </a>
+                  <ul class="dropdown-menu" >
+                    <li><a class="dropdown-item" href="#">Brokers</a></li>
+                    <li><a class="dropdown-item" href="#">Inspectores</a></li>
+                    <li><a class="dropdown-item" href="#">Reporte de vehículo</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Como Comprar</a></li>
+                    <li><a class="dropdown-item" href="#">Preguntas comunes</a></li>
+                    <li><a class="dropdown-item" href="#">Ayuda de licencia</a></li>
+                    <li><a class="dropdown-item" href="#">Videos</a></li>
+                    <li><a class="dropdown-item" href="#">Contactanos</a></li>
+                    <li><a class="dropdown-item" href="#" style="color: gold;"><b>Centro de Ayuda</b></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div id="up">
+            <b>Lista de Subastas</b>
+        </div>
+        <div id="general">
+            <div id="carrusel">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/L6/c1.JPG" class="d-block w-100" alt="Imagen de carro" style="height: 450px;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/L6/c2.JPG" class="d-block w-100" alt="Imagen de carro" style="height: 450px;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/L6/c3.JPG" class="d-block w-100" alt="Imagen de carro" style="height: 450px;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/L6/c4.JPG" class="d-block w-100" alt="Imagen de carro" style="height: 450px;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/L6/c5.JPG" class="d-block w-100" alt="Imagen de carro" style="height: 450px;">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/L6/c6.JPG" class="d-block w-100" alt="Imagen de carro" style="height: 450px;">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div id="sub">
+                <div style="text-align: center; color: blue; background-color: wheat; height: 40px;"><h3><b>En Juego</b></h3></div>
+                <div id="superior">
+                    2011 TOYOTA COROLLA BASE<br>
+                    Lote# 29716941
+                </div>
+                <div id="compra">
+                    
+                </div>
+                <div id="infoC">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>VIN:</td>
+                                <td style="text-align: right; padding-right:5px">">KMHD84LF7HU******</td>
+                            </tr>
+                            <tr>
+                                <td>Título:</td>
+                                <td style="text-align: right; padding-right:5px">GA-</td>
+                            </tr>
+                            <tr>
+                                <td>Odómetro:</td>
+                                <td style="text-align: right; padding-right:5px">0</td>
+                            </tr>
+                            <tr>
+                                <td>Destacados:</td>
+                                <td style="text-align: right; padding-right:5px">Sistema de Arranque</td>
+                            </tr>
+                            <tr>
+                                <td>Daño Principal:</td>
+                                <td style="text-align: right; padding-right:5px">Parte Delantera</td>
+                            </tr>
+                            <tr>
+                                <td> Valor Estimado:</td>
+                                <td style="text-align: right; padding-right:5px">$14,918.00 USD </td>
+                            </tr>
+                            <tr>
+                                <td>Artículo:</td>
+                                <td style="text-align: right; padding-right:5px">AUTOMOBILE</td>
+                            </tr>
+                            <tr>
+                                <td>Color:</td>
+                                <td style="text-align: right; padding-right:5px">Gris</td>
+                            </tr>
+                            <tr>
+                                <td>Tipo de motor:</td>
+                                <td style="text-align: right; padding-right:5px">2.0L 4</td>
+                            </tr>
+                            <tr>
+                                <td>Cilindros:</td>
+                                <td style="text-align: right; padding-right:5px">4</td>
+                            </tr>
+                            <tr>
+                                <td>Transmisión:</td>
+                                <td style="text-align: right; padding-right:5px">Automática</td>
+                            </tr>
+                            <tr>
+                                <td>Tracción:</td>
+                                <td style="text-align: right; padding-right:5px">Tracción Delantera</td>
+                            </tr>
+                            <tr>
+                                <td>Combustible:</td>
+                                <td style="text-align: right; padding-right:5px">Gas</td>
+                            </tr>
+                            <tr>
+                                <td>Llaves: </td>
+                                <td style="text-align: right; padding-right:5px">Si</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="proxima">
+              <div style="text-align: center; color: blue; background-color: wheat; height: 40px;"><h3><b>Próximo Lote</b></h3></div>
+              <!--Lote 1-->
+              <div id="Lote2" style="width: 100%; height: 80px; border: black 1px solid;">
+                <div style="float: right; width: 80%; height: 80px; padding-left: 15px; padding-top: 10px;"><b>2021 HONDA CR-V EXL <br> Lote # <a href="S1.html">26883360 </a></b></div>
+                <div style="width: 20%; height: 80px;"><img src="img/L1/c1.jpg" alt="Imagen Carro" style="width: 100%; height: 100%;"></div>
+              </div>
+
+              <!--Lote 2-->
+              <div id="Lote2" style="width: 100%; height: 80px; border: black 1px solid;">
+                <div style="float: right; width: 80%; height: 80px; padding-left: 15px; padding-top: 10px;"><b>2007 TOYOTA COROLLA CE <br> Lote # <a href="S2.html">30795402 </a></b></div>
+                <div style="width: 20%; height: 80px;"><img src="img/L2/c1.jpg" alt="Imagen Carro" style="width: 100%; height: 100%;"></div>
+              </div>
+
+              <!--Lote 3-->
+              <div id="Lote2" style="width: 100%; height: 80px; border: black 1px solid;">
+                <div style="float: right; width: 80%; height: 80px; padding-left: 15px; padding-top: 10px;"><b>2009 FORD ESCAPE XLS<br> Lote # <a href="S3.html">33537842 </a></b></div>
+                <div style="width: 20%; height: 80px;"><img src="img/L3/c1.jpg" alt="Imagen Carro" style="width: 100%; height: 100%;"></div>
+              </div>
+
+              <!--Lote 4-->
+              <div id="Lote2" style="width: 100%; height: 80px; border: black 1px solid;">
+                <div style="float: right; width: 80%; height: 80px; padding-left: 15px; padding-top: 10px;"><b>2004 FORD F150 <br> Lote # <a href="S4.html">36248563 </a></b></div>
+                <div style="width: 20%; height: 80px;"><img src="img/L4/c1.jpg" alt="Imagen Carro" style="width: 100%; height: 100%;"></div>
+              </div>
+
+             <!--Lote 5-->
+             <div id="Lote2" style="width: 100%; height: 80px; border: black 1px solid;">
+                <div style="float: right; width: 80%; height: 80px; padding-left: 15px; padding-top: 10px;"><b>2011 TOYOTA COROLLA BASE<br> Lote # <a href="S5.html">31267852 </a></b></div>
+                <div style="width: 20%; height: 80px;"><img src="img/L5/c1.jpg" alt="Imagen Carro" style="width: 100%; height: 100%;"></div>
+              </div>
+
+              <!--Lote 7-->
+              <div id="Lote2" style="width: 100%; height: 80px; border: black 1px solid;">
+                <div style="float: right; width: 80%; height: 80px; padding-left: 15px; padding-top: 10px;"><b>2015 HONDA CR-V EXL<br> Lote # <a href="S7.html">31094662 </a></b></div>
+                <div style="width: 20%; height: 80px;"><img src="img/L7/c1.jpg" alt="Imagen Carro" style="width: 100%; height: 100%;"></div>
+              </div>
+
+              <!--Lote 8-->
+              <div id="Lote2" style="width: 100%; height: 80px; border: black 1px solid;">
+                <div style="float: right; width: 80%; height: 80px; padding-left: 15px; padding-top: 10px;"><b>1996 HONDA CIVIC EX<br> Lote # <a href="S8.html">31363001 </a></b></div>
+                <div style="width: 20%; height: 80px;"><img src="img/L8/c1.jpg" alt="Imagen Carro" style="width: 100%; height: 100%;"></div>
+              </div>
+            </div>
+          </div>
+          <br><br><br>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>  
+    </body>
+</html>
