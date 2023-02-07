@@ -38,28 +38,97 @@
             width: 100%;
             height: 50px;
             padding-left: 20px;
+            border: 1px solid black;
+            font-weight: bold;
         }
         #infoC{
             width: 60%;
             height: 450px;
             padding-right: 5px;
-            background-color: yellow;
+            padding-left: 5px;
         }
-        td,tr{
+        tr{
           border: black 1px solid;
         }
-        #compra{
-            float: right;
-            background-color: yellowgreen;
-            display: inline-block;
-            width: 40%;
-            height: 450px;
+        td{
+          font-weight: bold;
         }
+        #compra{
+          border: 1px black solid;
+          margin-right: 5px;
+          padding-left: 5px;
+          float: right;
+          display: inline-block;
+          width: 38%;
+          height: 450px;
+        }
+        .spinner{
+          align-items: center;
+          margin-left: 30px;
+          border: 8px solid blue;
+          border-left-color: transparent;
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          animation: spin 1s linear infinite;
+          animation-iteration-count: 15;
+        }
+  
+        @keyframes spin {
+          0%{
+              transform: rotate(0deg);
+          }
+          100%{
+              transform: rotate(360deg);
+          }
+        }
+
         #proxima{
             float: left;
             display: inline-block;
             width: 30%;
             height: 540px;
+        }
+        @media (max-width:1500px) {
+          #up{
+            margin-left: 5px;
+          }
+          #general{
+            margin-left: 5px;
+          }
+          #carrusel{
+            width: 100%;
+            height: 500px;
+          }
+          
+          #sub{
+            margin-top: 80px;
+            width: 100%;
+            height: 500px;
+          }
+          
+          #infoC{
+            width: 1000px;
+            padding-left: 0px;
+            margin-right: 0px;
+          }
+
+          #compra{
+            width: 40%;
+            margin-right: 0px;
+            margin-left: 0px;
+          }
+
+          #anuncio{
+            margin-top: 80px;
+            margin-left: 150px;
+            width: 100%;
+          }
+          #proxima{
+            margin-top: 80px;
+            margin-left: 50px;
+            width: 70%;
+          }
         }
       </style>
 
@@ -190,15 +259,57 @@
                       <span class="visually-hidden">Next</span>
                     </button>
                 </div>
+                <div>
+                  <h3 style="font-weight: bold; color: red;">NOTA:</h3>
+                  <p>El spinner dará la vuelta en 15 segundos que es el tiempo que tendrá para hacer la puja por el carro, si nadie apuesta por el carro, este será suyo. De lo contrario habrá perdido el lote.</p>
+                </div>
             </div>
             <div id="sub">
-                <div style="text-align: center; color: blue; background-color: wheat; height: 40px;"><h3><b>En Juego</b></h3></div>
+                <div style="text-align: center; color: blue; background-color: wheat; height: 40px; border: 1px black solid;"><h3><b>En Juego</b></h3></div>
                 <div id="superior">
                     2021 HONDA CR-V EXL <br>
                     Lote# 26883360
                 </div>
                 <div id="compra">
+                  <div style="font-weight: bold; text-align: center; font-weight: bold; font-size: larger;">Tiempo 15 seg <br><br></div>
+                  <div id="spin"></div>
+                  <div id="puja">
+                    <div style="font-weight: bold;">Puja Actual: $ USD</div>
+                    <div>
+                      Aumento Valido de $100.00 USD 
+                    </div>
+                    $
+                    <div id="valor" style="display: inline;">0</div>
+                  </div>
+
+                  <button id="boton" class="btn btn-primary" style="margin-left: 40px; margin-top: 10px;">Sumar</button>
+
+                  <script>
+                    var cuenta = 50; 
                     
+                    document.getElementById("spin").classList.add ("spinner");
+                    
+                    function sumar(){
+                      cuenta = cuenta+cuenta;
+                      document.getElementById("valor").innerHTML = cuenta;
+                      document.getElementById("spin").classList.remove ("spinner");
+                      document.getElementById("spin").classList.add ("spinner");
+                    }
+                    
+                    document.getElementById("boton").onclick = function (){
+                      sumar();
+                    }
+                    
+                    element = document.getElementById("spin")
+                    compStyle = window.getComputedStyle(element);
+                    valor = compStyle.getPropertyValue("animation-iteration-count");
+                    if (valor === 15){
+                      btn = document.getElementById("boton");
+                      btn.disabled = true;
+                      alert("Ha ganado el lote");
+                    }
+                  </script>
+
                 </div>
                 <div id="infoC">
                     <table>
@@ -265,7 +376,7 @@
                 </div>
             </div>
             <div id="proxima">
-              <div style="text-align: center; color: blue; background-color: wheat; height: 40px;"><h3><b>Próximo Lote</b></h3></div>
+              <div style="text-align: center; color: blue; background-color: wheat; height: 40px; border: 1px black solid;"><h3><b>Próximo Lote</b></h3></div>
               <!--Lote 2-->
               <div id="Lote2" style="width: 100%; height: 80px; border: black 1px solid;">
                 <div style="float: right; width: 80%; height: 80px; padding-left: 15px; padding-top: 10px;"><b>2007 TOYOTA COROLLA CE <br> Lote # <a href="S2.html">30795402 </a></b></div>
