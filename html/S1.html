@@ -108,7 +108,7 @@
           }
           
           #infoC{
-            width: 1000px;
+            width: 60%;
             padding-left: 0px;
             margin-right: 0px;
           }
@@ -281,33 +281,54 @@
                     $
                     <div id="valor" style="display: inline;">0</div>
                   </div>
-
                   <button id="boton" class="btn btn-primary" style="margin-left: 40px; margin-top: 10px;">Sumar</button>
-
+                  <div id="modalInfo" class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Información de Subasta</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Ha ganado el vehículo</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
                   <script>
-                    var cuenta = 50; 
+                    var cuenta = 50;
+                    function girar(){
+                      document.getElementById("spin").classList.add ("spinner");
+                    }
                     
-                    document.getElementById("spin").classList.add ("spinner");
-                    
+                    girar();
+
                     function sumar(){
                       cuenta = cuenta+cuenta;
                       document.getElementById("valor").innerHTML = cuenta;
                       document.getElementById("spin").classList.remove ("spinner");
                       document.getElementById("spin").classList.add ("spinner");
+
+                      if(cuenta == 1600){
+                        document.getElementById("spin").classList.remove ("spinner");
+                        boton = document.getElementById("boton");
+                        boton.disabled = true;
+                        var myModal = new bootstrap.Modal(document.getElementById('modalInfo'), focus);
+                        myModal.show();
+                      }
                     }
                     
+                    function detener(){
+                      document.getElementById("spin").classList.remove ("spinner");
+                    }
+
                     document.getElementById("boton").onclick = function (){
                       sumar();
-                    }
-                    
-                    element = document.getElementById("spin")
-                    compStyle = window.getComputedStyle(element);
-                    valor = compStyle.getPropertyValue("animation-iteration-count");
-                    if (valor === 15){
-                      btn = document.getElementById("boton");
-                      btn.disabled = true;
-                      alert("Ha ganado el lote");
-                    }
+                      detener();
+                      setTimeout(girar,40);
+                      clearTimeout(girar);
+                    }               
                   </script>
 
                 </div>

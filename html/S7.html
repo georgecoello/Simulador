@@ -38,30 +38,58 @@
             width: 100%;
             height: 50px;
             padding-left: 20px;
+            border: 1px solid black;
+            font-weight: bold;
         }
         #infoC{
             width: 60%;
             height: 450px;
             padding-right: 5px;
-            background-color: yellow;
+            padding-left: 5px;
         }
-        td,tr{
+        tr{
           border: black 1px solid;
         }
-        #compra{
-            float: right;
-            background-color: yellowgreen;
-            display: inline-block;
-            width: 40%;
-            height: 450px;
+        td{
+          font-weight: bold;
         }
+        #compra{
+          border: 1px black solid;
+          margin-right: 5px;
+          padding-left: 5px;
+          float: right;
+          display: inline-block;
+          width: 35%;
+          height: 450px;
+        }
+        .spinner{
+          align-items: center;
+          margin-left: 30px;
+          border: 8px solid blue;
+          border-left-color: transparent;
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          animation: spin 1s linear infinite;
+          animation-iteration-count: 15;
+        }
+  
+        @keyframes spin {
+          0%{
+              transform: rotate(0deg);
+          }
+          100%{
+              transform: rotate(360deg);
+          }
+        }
+
         #proxima{
             float: left;
             display: inline-block;
             width: 30%;
             height: 540px;
         }
-        @media (max-width:700px) {
+        @media (max-width:1500px) {
           #up{
             margin-left: 5px;
           }
@@ -79,6 +107,18 @@
             height: 500px;
           }
           
+          #infoC{
+            width: 60%;
+            padding-left: 0px;
+            margin-right: 0px;
+          }
+
+          #compra{
+            width: 40%;
+            margin-right: 0px;
+            margin-left: 0px;
+          }
+
           #anuncio{
             margin-top: 80px;
             margin-left: 150px;
@@ -227,14 +267,73 @@
                     Lote# 31094662
                 </div>
                 <div id="compra">
+                  <div style="font-weight: bold; text-align: center; font-weight: bold; font-size: larger;">Tiempo 15 seg <br><br></div>
+                  <div id="spin"></div>
+                  <div id="puja">
+                    <div style="font-weight: bold;">Puja Actual: $ USD</div>
+                    <div>
+                      Aumento Valido de $40.00 USD 
+                    </div>
+                    $
+                    <div id="valor" style="display: inline;">0</div>
+                  </div>
+                  <button id="boton" class="btn btn-primary" style="margin-left: 40px; margin-top: 10px;">Sumar</button>
+                  <div id="modalInfo" class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Información de Subasta</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Ha ganado el vehículo</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <script>
+                    var cuenta = 20;
+                    function girar(){
+                      document.getElementById("spin").classList.add ("spinner");
+                    }
                     
+                    girar();
+
+                    function sumar(){
+                      cuenta = cuenta+cuenta;
+                      document.getElementById("valor").innerHTML = cuenta;
+                      document.getElementById("spin").classList.remove ("spinner");
+                      document.getElementById("spin").classList.add ("spinner");
+
+                      if(cuenta == 160){
+                        document.getElementById("spin").classList.remove ("spinner");
+                        boton = document.getElementById("boton");
+                        boton.disabled = true;
+                        var myModal = new bootstrap.Modal(document.getElementById('modalInfo'), focus);
+                        myModal.show();
+                      }
+                    }
+                    
+                    function detener(){
+                      document.getElementById("spin").classList.remove ("spinner");
+                    }
+
+                    document.getElementById("boton").onclick = function (){
+                      sumar();
+                      detener();
+                      setTimeout(girar,40);
+                      clearTimeout(girar);
+                    }               
+                  </script>
+
                 </div>
                 <div id="infoC">
                     <table>
                         <tbody>
                             <tr>
                                 <td>VIN:</td>
-                                <td style="text-align: right; padding-right:5px">">2HKRM4H78FH******</td>
+                                <td style="text-align: right; padding-right:5px">2HKRM4H78FH******</td>
                             </tr>
                             <tr>
                                 <td>Título:</td>
